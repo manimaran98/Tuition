@@ -1,0 +1,82 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="Style1.css">
+</head>  
+<body>
+<form id="myForm"> 
+
+  <div class="container">
+  <button onClick="location.href='../Registration/Registration.html'" type="button" class="cancel">X</button>
+  <center>  <h1> Student Registeration Form</h1> </center>   
+  <label> Firstname </label>   
+<input id="fname" type="text" name="firstname" placeholder= "Firstname" size="15" required />   
+<label> Middlename: </label>   
+<input type="text" name="middlename" placeholder="Middlename" size="15"/>   
+<label> Lastname: </label>    
+<input id="lname" type="text" name="lastname" placeholder="Lastname" size="15" required/>   
+<div>  
+<label>   
+Course :
+</label>   
+  
+<select>  
+<option value="SPM">SPM</option>  
+<option value="PT3">PT3</option>  
+<option value="UPSR">UPSR</option> 
+</select>	
+</div>  
+<div>  
+<label>   
+Gender :  
+</label><br>  
+<input type="radio" value="Male" name="gender" checked > Male   
+<input type="radio" value="Female" name="gender"> Female   
+<input type="radio" value="Other" name="gender"> Other  
+  
+</div>  
+<label>   
+Phone :  
+</label>  
+<input id="phone" type="text" name="country code" placeholder="Country Code"  value="+601" size="2"/>    
+Current Address :  
+<textarea id="addname" cols="80" rows="5" placeholder="Current Address" value="address" required>  
+</textarea>  
+ <label for="email"><b>Email</b></label>  
+ <input id="ename" type="text" placeholder="Enter Email" name="email" required>  
+  
+    <label for="psw"><b>Password</b></label>  
+    <input id="pword" type="password" placeholder="Enter Password" name="psw" required>  
+  
+    <label for="psw-repeat"><b>Re-type Password</b></label>  
+    <input id="pword1" type="password" placeholder="Retype Password" name="psw-repeat" required>  
+    <button type="submit" onClick="myFunction()" class="registerbtn">Register</button> 
+	</div>
+</form>
+	<script>
+function myFunction() {
+	
+	var x = document.forms["myForm"]["fname"].value;
+	var x = document.forms["myForm"]["lname"].value;
+	var x = document.forms["myForm"]["phone"].value;
+	var x = document.forms["myForm"]["addname"].value;
+	var x = document.forms["myForm"]["ename"].value;
+	var x = document.forms["myForm"]["pword"].value;
+	var x = document.forms["myForm"]["pword1"].value;
+	
+    var pw1 = document.getElementById("pword").value;  
+    var pw2 = document.getElementById("pword1").value;  
+  	if (x == "") {
+    alert("Please fill the Empty Space");
+    return false;
+	   }
+	if (pw1!=pw2){
+		alert("Password is not Same")
+		return false;
+	}
+	   else{alert("Registration Completed")};
+}
+</script>
+</body>  
+</html>  
